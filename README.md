@@ -1,3 +1,5 @@
+**This is a fork of the respoitory found at: https://github.com/erwi/qlc3d.git.**
+
 # Building qlc3d
 
 
