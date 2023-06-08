@@ -47,13 +47,15 @@ git submodule update --init --remote
 
 First install MinGW (tested version 11.0.0), add its location to the PATH variable. Then install CMake, and make. 
 
-To build, run the following:
+To build in "Release" mode, run the following:
 
 ```
 mkdir build && cd build
-cmake .. -G "MinGW Makefiles"
+cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 make
 ```
+
+This settings file reader works differently from the previous versions. **A line in the settings file must not end with a semicolon.**
 
 
 ## Building on a Mac

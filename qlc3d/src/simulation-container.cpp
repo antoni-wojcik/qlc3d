@@ -77,7 +77,11 @@ void SimulationContainer::initialise() {
     //	CREATE GEOMETRY
     //	NEED 3 GEOMETRY OBJECTS WHEN USING MESH REFINEMENT
     // ================================================================
-    std::string meshName = configuration.currentDirectory() + "/" + simu->meshName(); // TODO
+    #if Windows
+        std::string meshName = configuration.currentDirectory() + "\\" + simu->meshName(); // TODO
+    #elif Linux
+        std::string meshName = configuration.currentDirectory() + "/" + simu->meshName(); // TODO
+    #endif
     // mesh file is read and geometry is loaded in this function (in inits.cpp)
     prepareGeometry(geom_orig,
                     meshName,

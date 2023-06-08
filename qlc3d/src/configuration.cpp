@@ -7,7 +7,11 @@
 #include "configuration.h"
 
 Configuration::Configuration() :
-        settingsFileName_("./meshes/test.txt"), // default for backwards compatibility
+        #if Windows
+            settingsFileName_(".\\meshes\\test.txt"), // default for backwards compatibility
+        #elif Linux
+            settingsFileName_("./meshes/test.txt"), // default for backwards compatibility
+        #endif
         currentDirectory_(std::filesystem::current_path().string().c_str()),
         simu_(nullptr)
         {}
