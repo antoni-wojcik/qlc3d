@@ -16,7 +16,7 @@ The general steps are
 
 First clone the main code and then dependencies.
 ```
-git clone https://github.com/erwi/qlc3d.git
+git clone https://github.com/antoni-wojcik/qlc3d.git
 cd qlc3d
 git submodule update --init --remote
 ```
