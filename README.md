@@ -38,6 +38,23 @@ This starts the tests, and you can expect them to take some minutes to complete.
 ## Building in Windows
 In the past, qlc3d has successfully been compiled using a 64 bit MinGW compiler, but this hasn't been attempted recently. The approach should be similar to building on Linux.
 
+First clone the main code and then dependencies.
+```
+git clone https://github.com/erwi/qlc3d.git
+cd qlc3d
+git submodule update --init --remote
+```
+
+First install MinGW (tested version 11.0.0), add its location to the PATH variable. Then install CMake, and make. 
+
+To build, run the following:
+
+```
+mkdir build && cd build
+cmake .. -G "MinGW Makefiles"
+make
+```
+
 
 ## Building on a Mac
 This will probably not currently work as there are some Windows/Linux file system specific code, but it ***should*** be simple to replace these with standard c++17 code (TODO).
