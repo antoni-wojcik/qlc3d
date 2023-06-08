@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.10.0)
+
 project(project-qlc3d)
 
-add_definitions(-DLinux) ## Must choose either -DLinux OR -DWindows
+add_definitions(-DWindows) ## Must choose either -DLinux OR -DWindows
+remove_definitions(-DLinux)
 
 add_subdirectory(extern/fmt-8.1.1)
 add_subdirectory(extern/SpaMtrix)
