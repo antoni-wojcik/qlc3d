@@ -55,6 +55,12 @@ cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
 make
 ```
 
+If the "make" command is unrecognised in the last step, alternatively use:
+
+```
+mingw32-make
+```
+
 This settings file reader works differently from the previous versions. **A line in the settings file must not end with a semicolon.**
 
 
