@@ -14,7 +14,6 @@
 #include <unistd.h>
 #include <sys/stat.h> // for making directories
 #elif Windows
-//#include <windows.h>
 #include <direct.h>  // _getcwd
 #include <windows.h> // SetCurrentDirectory
 #else

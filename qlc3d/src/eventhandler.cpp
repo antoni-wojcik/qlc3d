@@ -41,7 +41,7 @@ void handleResultOutput(SimulationState &simulationState,
                         SolutionVector &q) {
     int currentIteration = simulationState.currentIteration();
     double currentTime = simulationState.currentTime();
-    std::string currentDirectory = std::filesystem::current_path().c_str();
+    std::string currentDirectory = std::filesystem::current_path().string().c_str();
     // Change to result output directory
     FilesysFun::setCurrentDirectory(simu.getSaveDir());
     double *director(NULL); // TODO: use vector

@@ -1,6 +1,15 @@
 #include <filesysfun.h>
 #include <util/exception.h>
 #include <util/logging.h>
+
+
+#if Windows
+#include <direct.h>  // _getcwd
+#include <windows.h> // SetCurrentDirectory
+#endif
+
+#undef Linux
+
 namespace FilesysFun
 {
 

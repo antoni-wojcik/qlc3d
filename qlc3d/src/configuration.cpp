@@ -8,7 +8,7 @@
 
 Configuration::Configuration() :
         settingsFileName_("./meshes/test.txt"), // default for backwards compatibility
-        currentDirectory_(std::filesystem::current_path().c_str()),
+        currentDirectory_(std::filesystem::current_path().string().c_str()),
         simu_(nullptr)
         {}
 

@@ -2,6 +2,9 @@
 #include <catch.h>
 #include <test-util.h>
 #include <reader.h>
+#include <string.h> // definition of the strdup() function
+
+
 
 TEST_CASE("Environment variable substitution in settings file") {
     using namespace std;
