@@ -1,3 +1,4 @@
 .idea/
 cmake-build-*/
 /qlc3d/doc/.~lock.SettingsFileManual.odt#
+/build/**
